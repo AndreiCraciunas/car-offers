@@ -278,6 +278,12 @@ class CarOffersApp {
                                 <span class="price-value monthly">${monthlyDisplay}</span>
                             </div>
                         ` : ''}
+                        ${offer.financing && offer.financing.downPayment ? `
+                            <div class="price-row">
+                                <span class="price-label">Avans</span>
+                                <span class="price-value">${this.formatCurrency(offer.financing.downPayment, offer.financing.monthlyPaymentCurrency || offer.price.currency)}</span>
+                            </div>
+                        ` : ''}
                         ${offer.financing && offer.financing.duration ? `
                             <div class="price-row">
                                 <span class="price-label">Durata</span>
