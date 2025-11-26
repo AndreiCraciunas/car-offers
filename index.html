@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferte Auto - Comparator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Oferte Auto</h1>
+            <p class="subtitle">Comparator de oferte auto personalizate</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="maker-filter">Marca</label>
+                    <select id="maker-filter">
+                        <option value="">Toate marcile</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="fuel-filter">Tip combustibil</label>
+                    <select id="fuel-filter">
+                        <option value="">Toate tipurile</option>
+                        <option value="benzina">Benzina</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="full-hybrid">Full Hybrid</option>
+                        <option value="mild-hybrid">Mild Hybrid</option>
+                        <option value="electric">Electric</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="payment-filter">Tip plata</label>
+                    <select id="payment-filter">
+                        <option value="">Toate tipurile</option>
+                        <option value="cash">Cash</option>
+                        <option value="credit">Credit</option>
+                        <option value="leasing">Leasing</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-by">Sorteaza dupa</label>
+                    <select id="sort-by">
+                        <option value="price-asc">Pret (crescator)</option>
+                        <option value="price-desc">Pret (descrescator)</option>
+                        <option value="monthly-asc">Rata lunara (crescator)</option>
+                        <option value="monthly-desc">Rata lunara (descrescator)</option>
+                        <option value="power-desc">Putere (descrescator)</option>
+                        <option value="maker-asc">Marca (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pending Offers Section -->
+        <section class="pending-section">
+            <div class="pending-header" id="pending-toggle">
+                <h2>Oferte in asteptare</h2>
+                <span class="pending-count" id="pending-count">0</span>
+                <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </div>
+            <div class="pending-content" id="pending-content">
+                <p class="pending-description">Modele pentru care astept sa fiu contactat de dealeri</p>
+                <div id="pending-container" class="pending-grid">
+                    <!-- Pending cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Grid -->
+        <section class="offers-section">
+            <div id="offers-container" class="offers-grid">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Expanded Card Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Ultima actualizare: <span id="last-updated"></span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "car-offers-comparator",
+  "version": "1.0.0",
+  "description": "Comparator de oferte auto personalizate",
+  "main": "index.html",
+  "scripts": {
+    "serve": "npx serve .",
+    "start": "npx serve ."
+  },
+  "private": true
+}
